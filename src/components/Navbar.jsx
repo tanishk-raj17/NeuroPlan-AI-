@@ -24,6 +24,7 @@ function Navbar() {
 
         {/* Buttons */}
         <div className="flex items-center gap-4">
+            <h1>hy</h1>
 
           {/* Login */}
           <a href="/login">
