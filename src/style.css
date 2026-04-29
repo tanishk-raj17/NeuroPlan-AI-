@@ -1,0 +1,64 @@
+/* 🔥 Global */
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #1a1a2e, #0f0f0f);
+  margin: 0;
+  color: white;
+}
+
+/* 🧊 Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* ✨ Glow Hover */
+.glow-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+  transition: 0.3s ease;
+}
+
+/* 🔥 Fade Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔥 Card Hover */
+.glass:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.4);
+}
+
+/* 🔥 Button Hover */
+button,
+a[class*="bg-"] {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a[class*="bg-"]:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+}
+
+/* 🌊 Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 📱 Responsive Fix */
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: blur(8px);
+  }
+}
