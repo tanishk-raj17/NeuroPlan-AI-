@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
+
   apiKey: "AIzaSyC4u0uFPsTysMyLgg0Pjz3lGPVIvIP59Rc",
   authDomain: "neuroplan-ai-95f0a.firebaseapp.com",
   projectId: "neuroplan-ai-95f0a",
@@ -11,5 +13,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 export const auth = getAuth(app);
+export const db = getFirestore(app);
