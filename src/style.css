@@ -1,0 +1,193 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #050816;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* =========================
+   TEXT SELECTION
+========================= */
+
+::selection {
+  background: #8b5cf6;
+  color: white;
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.2),
+    0 0 20px rgba(139, 92, 246, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.glass:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 20px 40px rgba(139, 92, 246, 0.4),
+    0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+a[class*="bg-"] {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a[class*="bg-"]:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 25px rgba(139, 92, 246, 0.6);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+/* =========================
+   RANGE SLIDER
+========================= */
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #8b5cf6;
+  cursor: pointer;
+}
+
+/* =========================
+   FADE UP ANIMATION
+========================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   PAGE ENTER ANIMATION
+========================= */
+
+.page-enter {
+  animation: pageEnter 0.5s ease;
+}
+
+@keyframes pageEnter {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   FLOATING GLOW
+========================= */
+
+@keyframes floatGlow {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-glow {
+  animation: floatGlow 4s ease-in-out infinite;
+}
+
+/* =========================
+   GLOW HOVER
+========================= */
+
+.glow-hover:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.6);
+
+  transition: 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .glass {
+    backdrop-filter: blur(10px);
+  }
+
+}
